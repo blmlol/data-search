@@ -27,10 +27,10 @@ connection.once('open', function () {
     );
 })
 
-// Import the routing setup from our Router 
+//Use router
 app.use('/', router);
 
-//Serving react on routes unused by previous routing
+
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });

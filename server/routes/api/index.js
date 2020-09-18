@@ -1,13 +1,11 @@
-const express = require('express'),
-  { api: controller } = require('../../controllers');
+const express = require('express');
+const controller = require('../../controllers/api');
 
 
 const router = express.Router();
 
-router.route('/')
-  .get(controller.getMain);
-
-router.route('/json')
-  .get(controller.getJson);
+router.route('/api/data').get(
+  controller.getData
+);
 
 module.exports = router;
