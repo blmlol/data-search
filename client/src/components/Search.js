@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import Results from './Results';
 import API from '../utils/index';
 import { useState } from 'react';
 
 function Search() {
+
+    useLayoutEffect(() => {
+        API.getAll()
+        .then(function(response){
+            console.log(response);
+        })
+    })
     const { register, handleSubmit, errors } = useForm();
     const [input, setInput] = useState();
 
 
     const onSubmit = data => {
-            API.getData(data.search).then((response) => {
+            API.getData(data.search).then(function(response) {
             console.log(response);
             //Here will return results from whole search onto page
         })

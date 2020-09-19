@@ -8,4 +8,8 @@ router.route('/data').get(
   controller.getData
 );
 
+router.route('/').get(
+  controller.getAll
+)
+
 module.exports = router;
