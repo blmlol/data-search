@@ -4,7 +4,7 @@ const controller = require('../../controllers/api');
 
 const router = express.Router();
 
-router.route('/api/data').get(
+router.route('/data').get(
   controller.getData
 );
 

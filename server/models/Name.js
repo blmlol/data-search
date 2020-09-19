@@ -2,22 +2,22 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const dataSchema = new Schema({
+const NameSchema = new Schema({
     first: {
         type: String,
         trim: true,
         required: true
     },
-    second: {
+    last: {
         type: String,
         trim: true,
         required: true
     }
-    
+
 
 
 
 });
 
-const Data = mongoose.model("Data", DataSchema);
-module.exports = Data;
+const Name = mongoose.model("Name", NameSchema);
+module.exports = Name;

@@ -1,7 +1,7 @@
 const express = require('express'),
     morgan = require('morgan'),
     path = require('path'),
-    mongoose = require('mongoose')
+    mongoose = require('mongoose'),
     router = require('./routes');
 
 const app = express();
